@@ -1,0 +1,58 @@
+.clock{
+    background: url(./ios_clock.svg) no-repeat center;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    border-radius: 50%;
+    background-color: white;
+}
+.clock::after {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: blue;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate (-50%, -50%);
+    border-radius: 50%;
+}
+.fondo {
+    position: absolute;
+    width: 500px;   
+    height: 500px;
+    background-color: grey;
+    padding: 20px;
+}
+.segundero{
+    position: absolute;
+    width: 5px;
+    height: 200px;   
+    background-color: red;
+    transform: translate(80%, 0%);
+    top: 15%;
+    left: 50%;
+    animation-name: segundero;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+@keyframes segundero{
+    0% {
+    width: 5px;
+    height: 200px;   
+    background-color: red;
+    transform: rotate(0deg);
+    transform-origin: bottom;
+ }
+   
+  100% {
+    width: 5px;
+    height: 200px;   
+    background-color: red;
+    transform: rotate(360deg);
+    transform-origin: bottom;
+
+  }
+}
